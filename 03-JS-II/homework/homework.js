@@ -32,8 +32,8 @@ function saludo(idioma) {
 if (idioma === 'mandarin'){
     return 'Ni Hao!';}
 if (idioma === 'ingles'){
-    return 'Hello';}
-return 'Hola!';
+    return 'Hello!';}
+ return 'Hola!';
 }
 
 function colors(color) {
@@ -74,15 +74,21 @@ return (numero);
 }
 
 function operadoresLogicos(num1, num2, num3) {
-  if (num1 > num2 && num1 > num3 && num1 > 0){
-    return 'Número 1 es mayor y positivo';}
-if (num1 < 0 || num2 < 0 || num3 < 0){
-    return 'Hay negativos';}
-if (num3 > num1 && num3 > num2){
-    return num3 + 1;}
-if (num1 === 0 || num2 === 0 || num3 === 0){
-    return 'Error';}
-return false;
+  if(num1 < 0 || num2 < 0 || num3 < 0) {
+    return "Hay negativos";
+  }
+  else if(num1 === 0 || num2 === 0 || num3 === 0) {
+    return "Error";
+  }
+  else if(num1 > 0 && num1 > num2 && num1 > num3) {
+    return "Número 1 es mayor y positivo";
+  }
+  else if(num3 > num1 && num3 > num2) {
+    return num3 + 1;
+  }
+  else {
+    return false;
+  }
 }
 
 function esPrimo(numero) {
@@ -99,10 +105,12 @@ function esPrimo(numero) {
 
 function esVerdadero(valor){
 
-    if (valor === true || valor === 1 || valor === ' ' || valor === [] || valor === {}){
-        return 'soy verdadero';}
-    if (valor === false || valor === 0 || valor === undefined || valor === null || valor === '')
-        return 'Soy falso';
+  if (valor === true){
+    return 'Soy verdadero';
+      }
+        if (valor === false){
+          return 'Soy falso';
+}
 
 }
 
